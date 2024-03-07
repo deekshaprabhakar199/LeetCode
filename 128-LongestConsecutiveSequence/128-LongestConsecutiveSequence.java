@@ -17,6 +17,6 @@
         return maxLength;
 }
         HashSet<Integer> unique = new HashSet<>();
-    public int longestConsecutive(int[] nums) {
-class Solution {
+
+//Time = Spacce = O(n)
 [
