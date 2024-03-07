@@ -1,15 +1,12 @@
-        HashMap<Integer, Integer> freqMap = new HashMap<>();
+            ans[i] = ans[i-1] * nums[i-1];
+        }
+        int suffix = 1;
+        for( int i = nums.length-1; i>=0; i--){
+            ans[i] = suffix * ans[i];
+            suffix = suffix * nums[i];
+        for( int i=1; i< nums.length; i++){
+        ans[0]=1;
+    public int[] productExceptSelf(int[] nums) {
+        int[] ans = new int[nums.length];
 class Solution {
-    public int[] topKFrequent(int[] nums, int k) {
-        for(int i: nums){
-            freqMap.put(i, freqMap.getOrDefault(i,0)+1);
-        }
-        ArrayList<Integer> freq= new ArrayList<>(freqMap.keySet());
-        freq.sort((a,b)-> freqMap.get(b)- freqMap.get(a));
-        for(int i=0; i<k; i++){
-            ans[i]=freq.get(i);
-        }
-    }
-        int[] ans= new int[k];
-        return ans;
 [
