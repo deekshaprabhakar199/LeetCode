@@ -8,11 +8,11 @@
             }
                 break;
                 finalRow = mid;
-        System.out.println(finalRow);
         int l2=0, r2= cols-1;
         while(l2<=r2){
             int mid= l2+(r2-l2)/2;
             if(matrix[finalRow][mid]==target){
                 return true;
             }
+            else if(matrix[finalRow][mid]> target){
 [
