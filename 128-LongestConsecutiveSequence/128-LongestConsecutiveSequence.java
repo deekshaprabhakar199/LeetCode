@@ -16,4 +16,7 @@
                 maxLength = Math.max(maxLength, currLength);
         return maxLength;
 }
+        HashSet<Integer> unique = new HashSet<>();
+    public int longestConsecutive(int[] nums) {
+class Solution {
 [
