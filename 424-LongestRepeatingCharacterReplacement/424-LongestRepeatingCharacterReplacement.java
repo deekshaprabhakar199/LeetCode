@@ -1,16 +1,14 @@
-            
-            maxf=Math.max(maxf, freq.get(str[r]));
-            while(r-l+1-maxf >k){
-                freq.put(str[l], freq.get(str[l])-1);
-                if(freq.get(str[l])==0) freq.remove(str[l]);
-                l++;
-            }
             length = Math.max(length, r-l+1);
             r++;
         }
-            freq.put(str[r],freq.getOrDefault(str[r],0)+1);
-        while(r<str.length){
+        return length;
+    }
+}
 
-        HashMap<Character, Integer> freq = new HashMap<>();
-        char[] str = s.toCharArray();
+
+//r - l + 1 - maxf: This represents the number of characters in the window that are different 
+//from the character with the maximum frequency (maxf).
+
+//time = O(n)
+//space = O(1)- worst case all 26 letters have some freq, so O(1) constant space only
 "
