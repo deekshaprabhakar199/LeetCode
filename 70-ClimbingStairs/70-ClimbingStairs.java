@@ -1,13 +1,13 @@
-    public int count(int n, int[] ans){
-        if(n<2) {
-            return 1;
         }
-
+            int temp = prev+curr;
+        for(int i=2; i<=n; i++){
+        int prev=1, curr = 1;
+        }
+            return 1;
+            prev = curr;
+            curr = temp;
+        return curr;
     }
-        return count(n,ans);
-        Arrays.fill(ans,-1);
-        int[] ans= new int[n+1];
-    public int climbStairs(int n) {
-        if(ans[n] != -1){
-            return ans[n];
+
+        if(n<2){
 2
