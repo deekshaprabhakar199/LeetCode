@@ -1,18 +1,15 @@
-        return (valid.isEmpty());// Case- (,{,[
-    }
-}
-                case ')': case '}': case ']': if(valid.isEmpty() || valid.pop() != s.charAt(i)) return false;
-            }
+            switch(s.charAt(i)){
         }
-       
-
- 
-                case '[': valid.push(']'); break;
-        Stack<Character> valid = new Stack<>();
-        for(int i=0; i<s.length(); i++){
-            switch (s.charAt(i)){
-                case '(': valid.push(')'); break;
-                case '{': valid.push('}'); break;
-        //Shorter Solution-
+                case '(' : parenthesis.push(')'); break;
+            }
+    }
+                case '{' : parenthesis.push('}'); break;
+                case '[' : parenthesis.push(']'); break;
+                case ')' : case ']' : case '}' : if(parenthesis.isEmpty() || parenthesis.pop() != s.charAt(i)) return false;
+        return (parenthesis.isEmpty());
+}
+        for( int i=0; i< s.length() ; i++){
+        Stack<Character> parenthesis = new Stack<>();
+class Solution {
     public boolean isValid(String s) {
 "
