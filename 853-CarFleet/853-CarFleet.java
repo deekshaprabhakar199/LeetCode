@@ -1,17 +1,16 @@
+        for( int i=0; i<position.length; i++){
             time[position[i]] = (double)(target- position[i]) / speed[i]; 
         }
-        double previous = 0.0;
-        for(int i= time.length-1; i>=0; i--){
-            double curr= time[i];
+        for(int i = time.length-1; i>=0; i--){
+            double curr = time[i];
         }
-            if(curr>previous){
-                previous = curr;
+        double prev = 0.0;
+            if(curr > prev){
+                prev = curr;
             }
-                res++;
-        return res;
-
-        for( int i=0; i<position.length; i++){
-        double[] time = new double[target];
-        int res=0;
     }
+                fleets++;
+        return fleets;
+}
+//time[position[i]] is the asn to optimisation
 1
