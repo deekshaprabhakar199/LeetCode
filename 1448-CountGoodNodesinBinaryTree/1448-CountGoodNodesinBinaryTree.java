@@ -1,14 +1,11 @@
-class Solution {
-    public int goodNodes(TreeNode root) {
-        return backtrack(root,root.val);
-    }
-
-    public int backtrack(TreeNode root, int max){
-        
-        if(root==null){
-            return 0;
+        int curr=0;
+        if(root.val >= max){
+            curr= 1;
+            max = root.val;
         }
-        
-        int count=0;
-        if(root.val>=max){
+        int left = checkGood(root.left, max);
+        int right = checkGood(root.right, max);
+        return curr+left+right;
+    }
+}
 [
