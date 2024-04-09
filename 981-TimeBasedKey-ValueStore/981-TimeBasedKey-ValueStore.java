@@ -1,14 +1,17 @@
-        if(!dict.containsKey(key)){
-            return "";
-        }
-        TreeMap<Integer,String> tmap = dict.get(key);
-        Integer hkey= tmap.floorKey(timestamp);
-        String val = hkey == null ? "": tmap.get(hkey);
+        Integer tkey = tmap.floorKey(timestamp);
+        String ans = (tkey == null) ? "" : tmap.get(tkey);
+        TreeMap<Integer, String> tmap = dict.get(key);
     public String get(String key, int timestamp) {
+        if(!dict.containsKey(key)) return "";
+        if(!dict.containsKey(key)) dict.put(key, new TreeMap<>());
+        dict.get(key).put(timestamp,value);
+    }
     
+        dict = new HashMap();
     }
-        dict.get(key).put(timestamp, value);
-        return val;
-
-    }
+    
+    public void set(String key, String value, int timestamp) {
+class TimeMap {
+    HashMap<String, TreeMap<Integer, String>> dict = new HashMap<>();
+    public TimeMap() {
 [
