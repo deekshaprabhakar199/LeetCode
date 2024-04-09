@@ -9,8 +9,8 @@
         if(min != null && root.val <= min || max != null && root.val >= max ){
             return false;
         }
-        boolean left = checkValid(root.left,null, root.val);
-        boolean right = checkValid(root.right, root.val, null);
+        boolean left = checkValid(root.left,min, root.val);
+        boolean right = checkValid(root.right, root.val, max);
         return left && right;
 class Solution {
  */
