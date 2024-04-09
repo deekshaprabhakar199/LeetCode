@@ -4,8 +4,12 @@
             max = root.val;
         }
         int left = checkGood(root.left, max);
-        int right = checkGood(root.right, max);
-        return curr+left+right;
+        }
+            return 0;
+        if( root == null){
+    public int checkGood(TreeNode root, int max){
+
     }
-}
+        return checkGood(root, max);
+        int max=Integer.MIN_VALUE;
 [
