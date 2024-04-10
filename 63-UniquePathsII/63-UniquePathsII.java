@@ -1,17 +1,23 @@
+                right--;
+            }
+            else if(f==2){
+                for(int i=right;i>=left;i--){
+                    ls.add(arr[down][i]);
                 }
-                    
-                    dp[i][j]=0; 
-                if(obstacleGrid[i][j] == 1) {
+                f=3;
+                down--;
+            }
+            else if(f==3){
+                for(int i=down;i>=up;i--){
+                    ls.add(arr[i][left]);
                 }
-                    continue;
-                    dp[0][0] = (obstacleGrid[0][0] == 1) ? 0 : 1;
-                if( i==0 && j==0){ 
-            for( int j=0; j<n; j++){
-        for( int i=0; i< m; i++){
+                f=0;
+                left++;
+            }
+        }
+        return ls;
 
-        int[][] dp = new int[m][n];
-                else{
-                    int up=0, left =0;
-                    if( i>0) up = dp[i-1][j];
-                    if( j>0) left =  dp[i][j-1];
+        
+    }
+}
 [
