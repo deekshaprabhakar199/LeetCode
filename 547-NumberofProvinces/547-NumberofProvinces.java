@@ -1,16 +1,14 @@
             if(!visited[i]){
-                dfs(i, isConnected, visited);
                 count++;
+                dfs(i, isConnected, visited);
             }
         }
         return count;
-    }
+        for(int i=0; i<n; i++){
 
-    public void dfs(int curr, int[][] isConnected, boolean[] visited){
-        visited[curr]= true;
-        for( int i=0; i< isConnected[curr].length; i++){
-            if(!visited[i] && isConnected[curr][i]==1){
-                dfs(i, isConnected, visited);
-            }
-        }
+        boolean[] visited = new boolean[n];
+        int count = 0;
+        int n= isConnected.length;
+    public int findCircleNum(int[][] isConnected) {
+class Solution {
 [
