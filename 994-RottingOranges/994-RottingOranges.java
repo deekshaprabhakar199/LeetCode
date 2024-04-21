@@ -1,19 +1,19 @@
-                if(nrow >=0 && ncol >=0 && nrow < rows && ncol < cols && visited[nrow][ncol] == 0 && grid[nrow][ncol] ==1){
-                    bfs.add(new Pair(nrow, ncol, time+1));
-                    visited[nrow][ncol] =2;
-                    converted++;
-                }
-            }
+    }
+    public void dfs( int row, int col, int[][]grid, int minutes){
+        if(row < 0 || col < 0 || row >= grid.length || col >= grid[0].length || grid[row][col]==0 || (1< grid[row][col] && grid[row][col] < minutes)){
+            return;
         }
-        if(fresh != converted) return -1;
+        grid[row][col] = minutes;
 
-                int ncol = rcol + dcol[i];
-                int nrow = rrow + drow[i];
-            for(int i=0; i<4; i++){
-
-            bfs.remove();
-            tm = Math.max(tm,time);
-            int time = bfs.peek().t;
-            int rcol = bfs.peek().col;
-            int rrow = bfs.peek().row;
+        dfs(row+1, col, grid, minutes+1);
+        dfs(row-1, col, grid, minutes+1);
+        dfs(row, col+1, grid, minutes+1);
+        dfs(row, col-1, grid, minutes+1);
+    }
+        return minutes-2;
+        }
+            }
+                minutes = Math.max(minutes, grid[i][j]);
+                }
+                    return -1;
 [
