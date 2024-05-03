@@ -1,18 +1,14 @@
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String, List<String>> anagram = new HashMap<>();
+        for(String str : strs){
+            char[] s1 = str.toCharArray();
         }
-            }
-            bucket[frequency].add(i);
-
-        for(int i= bucket.length-1; i>=0 ;i--){
-            if(bucket[i] != null){
-                for(int num:bucket[i]){
-                    result[index] = num;
-                    index++;
-                    if(index == k){
-                        return result;
-                    }
-                }
-            }
-        }
-                bucket[frequency] = new ArrayList<Integer>();
-            if (bucket[frequency] == null){
+    }
+            Arrays.sort(s1);
+            anagram.putIfAbsent(s2, new ArrayList<String>());
+            anagram.get(s2).add(str);
+        return new ArrayList<>(anagram.values());
+            String s2 = new String(s1);
+}
 [
