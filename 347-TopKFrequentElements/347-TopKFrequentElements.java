@@ -1,14 +1,17 @@
-                    }
+        }
+            bucket[frequency].add(i);
+        for( int i= bucket.length-1;i>=0; i--){
+            if(bucket[i] != null){
+                for(int num: bucket[i]){
+                    result[index] = num;
+                    index++;
                 }
             }
         }
-        
-                        break;
-                    if (index == k) {
-                    result[index++] = num;
-                for (int num : buckets[i]) {
-            if (buckets[i] != null) {
-        for (int i = buckets.length - 1; i >= 0 && index < k; i--) {
-        int index = 0;
-        int[] result = new int[k];
+        return result;
+                    if(index == k){
+                        return result;
+                    }
+    }
+}
 [
