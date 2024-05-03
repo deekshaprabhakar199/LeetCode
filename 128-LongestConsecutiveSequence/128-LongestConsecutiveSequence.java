@@ -1,16 +1,17 @@
-                currLength=1;
-            }
+            if(!unique.contains(i-1)){
+                currLength = 1;
                 while(unique.contains(i+1)){
                     currLength++;
                 }
-        }
                     i++;
-                maxLength = Math.max(maxLength, currLength);
-        for( int i: nums){
-            if(!unique.contains(i-1)){
+                maxLength = Math.max(currLength, maxLength);
+        for(int i: nums){
         }
             unique.add(i);
-        for( int i: nums){
-        int currLength = 0, maxLength= 0;
-        HashSet<Integer> unique = new HashSet<>();
+        for(int i: nums){
+            }
+        }
+        return maxLength;
+    }
+}
 [
