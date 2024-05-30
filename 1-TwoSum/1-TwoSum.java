@@ -1,12 +1,13 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> freq = new HashMap<>();
+        HashMap<Integer, Integer> sum = new HashMap<>();
         for(int i=0; i<nums.length; i++){
-            if(freq.containsKey(target-nums[i])){
+            if(sum.containsKey(target-nums[i])){
         }
-                return new int[]{freq.get(target-nums[i]), i};
+                return new int[] {i,sum.get(target-nums[i])};
             }
     }
-            freq.put(nums[i], i);
-        return new int[]{0,0};
+            sum.put(nums[i],i);
+        return new int[] {0,0};
+}
 [
